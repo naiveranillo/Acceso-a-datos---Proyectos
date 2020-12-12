@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 13/06/2020 03:50:46 AM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="modelo.Usuarios" table="usuarios" catalog="biblioteca" optimistic-lock="version">
+        <id name="cedula" type="int">
+            <column name="cedula" />
+            <generator class="assigned" />
+        </id>
+        <property name="nombre" type="string">
+            <column name="nombre" length="50" not-null="true" />
+        </property>
+        <property name="fechaNac" type="string">
+            <column name="fecha_nac" length="10" not-null="true" />
+        </property>
+        <property name="sexo" type="string">
+            <column name="sexo" length="30" not-null="true" />
+        </property>
+        <property name="tipoUsu" type="string">
+            <column name="tipo_usu" length="30" not-null="true" />
+        </property>
+        <property name="estado" type="string">
+            <column name="estado" length="30" not-null="true" />
+        </property>
+        <property name="cantLibrosPrest" type="int">
+            <column name="cant_libros_prest" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>
